@@ -7,8 +7,8 @@ Prerequisites:
 
 Before running the chatbot, make sure that you have the following libraries installed:
 
-Python 3.6 or later
-Transformers
+Python 3.6 or later,
+Transformers,
 Pytorch
 
 Running the Chatbot:
