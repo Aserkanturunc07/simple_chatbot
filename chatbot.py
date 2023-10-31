@@ -15,7 +15,7 @@ def chatbot():
     # Creating a conversation object
     conversation = Conversation()
 
-    #Looping until user types exit
+    # Looping until user types exit
     while True:
         # Getting user input
         user_input = input("You: ")
@@ -31,17 +31,17 @@ def chatbot():
         # Getting the model response using the converse object
         response = converse(
             conversation,
-            max_length=128, 
+            max_length=128,
             # Maximum length of the sequence to be generated
             # If max length is exceeded, the input is automatically trimmed
             # to contain the last 128 tokens
-            num_return_sequences=1, # just one sequence returned, not multiple)
+            num_return_sequences=1, # Just one sequence returned, not multiple)
             top_k=50, # The number of highest probability vocabulary tokens to keep
-            top_p=0.95, # making sure the response is generated using most probable responses
+            top_p=0.95, # Making sure the response is generated using most probable responses
             do_sample=True)
 
-        # Print model response
+        # Printing model response
         print("Chatbot:", response.generated_responses[-1])
 
 if __name__ == "__main__":
-    chatbot() #running the chatbot
+    chatbot() # Running the chatbot
